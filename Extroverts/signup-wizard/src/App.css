@@ -1,0 +1,517 @@
+/* =========================
+   GLOBAL APP
+========================= */
+
+#root {
+  min-height: 100vh;
+}
+
+.landing-page,
+.terms-page,
+.signup-page,
+.success-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+/* =========================
+   LANDING PAGE
+========================= */
+
+.landing-page {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 20%, #3a3a3a 0%, transparent 35%),
+    radial-gradient(circle at 80% 80%, #222 0%, transparent 35%),
+    #111;
+}
+
+.landing-container {
+  width: 100%;
+  max-width: 1150px;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.45);
+}
+
+.landing-content {
+  width: 100%;
+  max-width: 650px;
+  text-align: center;
+  color: white;
+}
+
+.landing-content h1 {
+  margin-bottom: 20px;
+  font-size: clamp(48px, 7vw, 82px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.landing-content p {
+  max-width: 550px;
+  margin: 0 auto 38px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.landing-content button {
+  min-width: 190px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 14px;
+  background: white;
+  color: #111;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.landing-content button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15);
+}
+
+/* =========================
+   TERMS PAGE
+========================= */
+
+.terms-page {
+  background:
+    radial-gradient(circle at top right, #e9e4da, transparent 35%),
+    #f5f3ef;
+}
+
+.terms-container {
+  width: 100%;
+  max-width: 780px;
+  padding: 45px;
+  border: 1px solid #e5e2dc;
+  border-radius: 28px;
+  background: white;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.08);
+}
+
+.terms-container > button:first-child {
+  border: none;
+  background: transparent;
+  color: #777;
+  padding: 0;
+  margin-bottom: 28px;
+}
+
+.terms-container h1 {
+  margin-bottom: 30px;
+  color: #161616;
+  font-size: 34px;
+}
+
+.terms-content {
+  max-height: 430px;
+  overflow-y: auto;
+  padding-right: 18px;
+  margin-bottom: 30px;
+}
+
+.terms-content h2 {
+  margin-top: 25px;
+  margin-bottom: 8px;
+  color: #222;
+  font-size: 17px;
+}
+
+.terms-content p {
+  color: #707070;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.terms-container > button:last-child {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: #111;
+  color: white;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.terms-container > button:last-child:hover {
+  background: #292929;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   SIGNUP PAGE
+========================= */
+
+.signup-page {
+  background:
+    radial-gradient(circle at top left, #ebe7df, transparent 35%),
+    #f5f3ef;
+  align-items: center;
+}
+
+.signup-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 45px;
+  border: 1px solid #e4e1db;
+  border-radius: 28px;
+  background: white;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.09);
+}
+
+.wizard-step {
+  width: 100%;
+}
+
+.wizard-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.step-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #888;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.wizard-header h1 {
+  margin-bottom: 12px;
+  color: #161616;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.wizard-header p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.wizard-header strong {
+  display: block;
+  margin-top: 8px;
+  color: #222;
+  word-break: break-word;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 9px;
+  color: #333;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 54px;
+  padding: 0 16px;
+  border: 1px solid #dedbd5;
+  border-radius: 13px;
+  outline: none;
+  background: #fafaf9;
+  color: #222;
+  transition: all 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+  border-color: #c6c2ba;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #111;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-group input:disabled,
+.form-group select:disabled {
+  background: #eeeeec;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.field-error {
+  margin-top: 7px;
+  color: #d92d20;
+  font-size: 12px;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.wizard-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.wizard-actions button {
+  flex: 1;
+  min-height: 52px;
+  border-radius: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.wizard-actions button:first-child {
+  border: 1px solid #dedbd5;
+  background: white;
+  color: #333;
+}
+
+.wizard-actions button:last-child {
+  border: none;
+  background: #111;
+  color: white;
+}
+
+.wizard-actions button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.wizard-actions button:last-child:hover:not(:disabled) {
+  background: #292929;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.wizard-actions button:disabled {
+  opacity: 0.5;
+}
+
+/* =========================
+   OTP
+========================= */
+
+.demo-otp {
+  margin-top: 24px;
+  padding: 11px 15px;
+  border-radius: 10px;
+  background: #f4f3f0;
+  color: #777;
+  text-align: center;
+  font-size: 12px;
+}
+
+.demo-otp strong {
+  color: #222;
+}
+
+/* =========================
+   SUCCESS
+========================= */
+
+.success-page {
+  background:
+    radial-gradient(circle at center, #e9e5dd, transparent 40%),
+    #f5f3ef;
+}
+
+.success-container {
+  width: 100%;
+  max-width: 520px;
+  padding: 55px 45px;
+  border: 1px solid #e4e1db;
+  border-radius: 28px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.09);
+}
+
+.success-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #111;
+  color: white;
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.success-container h1 {
+  margin-bottom: 12px;
+  color: #161616;
+  font-size: 30px;
+}
+
+.success-container p {
+  margin-bottom: 30px;
+  color: #777;
+}
+
+.success-container button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 13px;
+  background: #111;
+  color: white;
+  font-weight: 600;
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-container {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #888;
+  font-size: 11px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #e8e6e1;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #111;
+  transition: width 0.35s ease;
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.toast {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 1000;
+  min-width: 280px;
+  max-width: 400px;
+  padding: 15px 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-radius: 13px;
+  background: #222;
+  color: white;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.toast-error {
+  background: #c62828;
+}
+
+.toast-success {
+  background: #2e7d32;
+}
+
+.toast button {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 22px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+  .landing-page,
+  .terms-page,
+  .signup-page,
+  .success-page {
+    padding: 16px;
+  }
+
+  .landing-container {
+    min-height: 620px;
+    padding: 35px 22px;
+    border-radius: 24px;
+  }
+
+  .landing-content h1 {
+    font-size: 48px;
+  }
+
+  .landing-content p {
+    font-size: 15px;
+  }
+
+  .terms-container,
+  .signup-container,
+  .success-container {
+    padding: 30px 22px;
+    border-radius: 20px;
+  }
+
+  .wizard-header h1 {
+    font-size: 27px;
+  }
+
+  .terms-container h1 {
+    font-size: 28px;
+  }
+
+  .wizard-actions {
+    flex-direction: column-reverse;
+  }
+
+  .wizard-actions button {
+    width: 100%;
+  }
+
+  .toast {
+    left: 16px;
+    right: 16px;
+    min-width: auto;
+  }
+}
